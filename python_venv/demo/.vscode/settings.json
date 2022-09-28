@@ -1,0 +1,12 @@
+{
+    // Workspace Settings
+
+    // virtual environments 中的 python 執行檔
+    //"python.defaultInterpreterPath": "C:\\Users\\sara\\Desktop\\project\\python_venv\\venv\\Scripts\\Activate.bat",
+
+    // 可以設定你放全部的 venvs 環境的根目錄資料夾
+    "python.venvPath": "C:\\Users\\sara\\Desktop\\project\\python_venv",
+
+    "python.terminal.activateEnvironment": true, // 自動啟動環境
+
+}
