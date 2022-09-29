@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #re_path(r'^$', views.hello),
     path('index/', views.index),
+    path('index1/', views.index1),
 
 ]

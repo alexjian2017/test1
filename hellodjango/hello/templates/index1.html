@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block mainBody %}
+<p>this is inherit from "base.html"</p>
+
+
+<p>{{name}}</p>
+<p>{{view_list}}</p>
+{# 過濾器 #}
+<p>{{view_list | lower}}</p>
+<p>{{view_list.2}}</p>
+<p>{{view_dic}}</p>
+<p>{{view_dic.name}}</p>
+<p>{{view_dic.age}}</p>
+
+{# if/else 這是注釋 #}
+<p>
+    {% if score >= 95 and score <= 100 %}
+        perfect
+    {% elif score >= 85 and score < 95 %}
+        nice
+    {% elif score >= 60 and score < 85 %}
+        pass
+    {% else %}
+        fail
+    {% endif %}
+</p>
+
+{# for #}
+{% for word in view_list %}
+    <p>{{word}}</p>
+{% endfor %}
+{% for key, value in view_dic.items %}
+    <p>{{key}}:{{value}}</p>
+{% endfor %}
+
+{# empty_list #}
+{% for i in empty_list %}
+    <p>i</p>
+{% empty %}
+    <p>列表為空o</p>
+{% endfor %}
+
+{# 自定義標籤 #}
+{% load my_tags %}
+<p>自定義標籤: {% mul 11 22 33%}</p>
+{% my_input 'username_input' 'UserName' %}
+
+{# 自定義過濾器 #}
+<p>最終成績:{{score | my_filter:0.6}}</p>
+
+{% endblock mainBody %}
